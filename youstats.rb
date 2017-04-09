@@ -1,6 +1,7 @@
 #author: mminski 09.04.2017
 require 'jrubyfx'
 require 'java'
+require 'date'
 # require './commons-io-2.5.jar'
 require 'jdbc/sqlite3'
 
@@ -39,8 +40,7 @@ conn.close
 class BarChart < JRubyFX::Application
 
   def start(stage)
-    @@months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun",
-                "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"]
+    @@months = 12.times.collect{|i| date = DateTime.now << i; date.strftime("%B")}.reverse
     @@chart_data = [['Count', $a]]
 
     with(stage, title: "browsing data", width: 900, height: 700) do
