@@ -11,6 +11,7 @@ gem install jdbc-sqlite3
 change the path variable in the script
 
 linux /home/USERNAME/.mozilla/firefox/*.default/places.sqlite
+
 windows \AppData\Roaming\Mozilla\Firefox\Profiles\
 
 
