@@ -46,7 +46,7 @@ class BarChart < JRubyFX::Application
     with(stage, title: "browsing data", width: 900, height: 700) do
         stage.layout_scene(800, 600) do
               bar_chart(category_axis,
-                         number_axis(label: '$ (USD)'),
+                         number_axis(label: ''),
                          title: 'monthly website visit count') do
                 @@chart_data.each_with_index do |(name, chart), j|
                   xy_chart_series(name: name) do
